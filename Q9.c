@@ -14,13 +14,12 @@ Simple Interest=1050, Compound Interest=1125.76
 
 */
 #include<stdio.h>
-#include<math.h>  // for pow()
+#include<math.h>  
 
 int main() {
-    double P, R, T;   // Principal, Rate, Time
+    double P, R, T;   
     double SI, CI, A;
 
-    // Input values
     printf("Enter Principal: ");
     scanf("%lf", &P);
 
@@ -30,14 +29,14 @@ int main() {
     printf("Enter Time (in years): ");
     scanf("%lf", &T);
 
-    // Simple Interest
+    
     SI = (P * R * T) / 100.0;
 
-    // Compound Interest
-    A = P * pow((1 + R / 100.0), T);  // Final Amount
+   
+    A = P * pow((1 + R / 100.0), T);  
     CI = A - P;
 
-    // Output results
+    
     printf("\n--- Interest Calculation ---\n");
     printf("Simple Interest = %.2lf\n", SI);
     printf("Compound Interest = %.2lf\n", CI);
